@@ -1,0 +1,97 @@
+.viz {
+    position: relative;
+    background: rgba(190, 190, 190, 0.2);
+    border-radius: 5px;
+}
+.viz:hover {
+    cursor: pointer;
+}
+.svg-container {
+    display: inline-block;
+    overflow: scroll;
+    width: 100%;
+}
+.svg-content {
+    display: inline-block;
+    overflow: scroll;
+}
+#tooltip {
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+    left: 10px;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+#tooltip p {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.button-tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+}
+
+.button-tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    flex: 1
+}
+
+.button-tabs button:hover {
+    background-color: #ddd;
+}
+
+.button-tabs button.active {
+    background-color: #dedede;
+}
+@media all and (max-width: 600px) {  
+    .button-tabs {  
+      flex-wrap: wrap;
+    }  
+      
+    .button-tabs button {  
+      flex-basis: 50%;  
+    }
+
+    #tooltip {
+        top: inherit;
+        position: unset;
+        flex-direction: row;
+    }
+    #tooltip p {
+        width: 50%;
+    }
+
+
+}
+@media all and (max-width: 400px) {  
+    .button-tabs button {  
+      flex-basis: 100%;  
+    }  
+    #tooltip {
+        flex-direction: column;
+        align-items: center;
+    } 
+    #tooltip p {
+        width: 100%;
+    }
+}
